@@ -26,22 +26,33 @@
      // attachEvent()
     // jQuery - on
 
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
+    // type - the type of event (e.g. click, load, mouseover)
+    // , timestamp - when the event was created
+    // , preventDefault() - stops the default action of the event from happening (e.g. following a link)
+    // , stopPropagation() - stops the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event
+    // target - the element that triggered the event
+    // , toElement - the element that the mouse pointer is moving to
+    // , fromElement - the element that the mouse pointer is moving from
+    // , srcElement - the element that triggered the event
+    // , currentTarget - the element that the event handler is attached to
+    // clientX - the horizontal coordinate of the mouse pointer when the event was triggered
+    // , clientY - the vertical coordinate of the mouse pointer when the event was triggered
+    // , screenX - the horizontal coordinate of the mouse pointer when the event was triggered, relative to the whole screen
+    // , screenY - the vertical coordinate of the mouse pointer when the event was triggered, relative to the whole screen
+    // keyCode - the Unicode character code of the key that triggered the event
 
+    //best way to add event listener
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
-    // }, false)
+    // }, false - means bubbling up the dom tree bottom to top and true - means capturing top to bottom)
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     e.stopPropagation() - stops the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event
     // }, false)
     
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
+    //     e.preventDefault(); - stops the default action of the event from happening (e.g. following a link)
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
@@ -57,7 +68,5 @@
     
         
     })
-    
-    //removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
